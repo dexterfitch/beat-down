@@ -1,0 +1,36 @@
+<div class="col-md-6">
+  <div class="col-md-12">
+    <h2>Reporters for {{ beat.name }}</h2>
+    <div ng-show="beat.reporters.length">
+      <ul class="list-unstyled">
+        <li ng-repeat="item in beat.reporters | orderBy: 'lastName' : reverse">
+           <span class="larger">
+             <a ng-click="reporterDetails = !reporterDetails" href="">{{ item.firstName }} {{ item.lastName }}</a>
+           </span>
+           <br>
+           <span ng-show="reporterDetails">
+             Employed Since: {{ item.dateEmployed }}<br>
+             Birthday: {{ item.birthday }}
+           </span>
+        </li>
+      </ul>
+    </div>
+  </div>
+
+  <div class="col-md-12">
+    <span ng-click="showAddReporter = !showAddReporter" class="btn btn-primary">Add Reporter</span>
+
+    <span ng-show="showAddReporter" ng-submit="showAddReporter = false">
+      <h2>Add a reporter to {{ beat.name }}</h2>
+      <form ng-submit="addReporter()" class="form-inline" role="form">
+        <div class="form-group">
+          <input type="text" ng-model="firstName" class="form-control" placeholder="First Name"><br>
+          <input type="text" ng-model="lastName" class="form-control" placeholder="Last Name"><br>
+          <input type="text" ng-model="dateEmployed" class="form-control" placeholder="Hire Date (mm-dd-yyyy)"><br>
+          <input type="text" ng-model="birthday" class="form-control" placeholder="Birthday (mm-dd-yyyy)"><br>
+          <button type="submit" ng-click="" class="btn btn-default">Submit</button>
+        </div>
+      </form>
+    </span>
+  </div>
+</div>
