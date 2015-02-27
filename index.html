@@ -7,12 +7,23 @@
     <script src="lib/angular-ui-router.js"></script>
     <script src="app.js"></script>
 
+    <script src="services/BeatsFactory.js"></script>
+    <script src="services/UtilitiesFactory.js"></script>
+    <script src="controllers/ReportersController.js"></script>
+    <script src="controllers/BeatsController.js"></script>
+
     <link rel="stylesheet" href="css/bootstrap.css">
     <link rel="stylesheet" href="css/styles.css">
+    <link href='http://fonts.googleapis.com/css?family=Lobster' rel='stylesheet' type='text/css'>
+    <link rel="stylesheet" href="//maxcdn.bootstrapcdn.com/font-awesome/4.3.0/css/font-awesome.min.css">
   </head>
   <body>
     <div class="container">
-      <div ui-view></div>
+      <div class="col-md-1"></div>
+      <div class="col-md-10">
+        <div ui-view></div>
+      </div>
+      <div class="col-md-1"></div>
     </div>
   </body>
 </html>
