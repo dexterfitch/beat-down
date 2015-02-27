@@ -1,11 +1,15 @@
-.larger {
-  font-size: 18px;
+.btn-margin {
+  margin: 1em 0;
 }
 
 .center {
   text-align: center;
 }
 
-.btn-margin {
-  margin: 1em 0;
+.larger {
+  font-size: 18px;
+}
+
+#splash-image {
+  cursor: pointer;
 }
